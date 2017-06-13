@@ -1,0 +1,23 @@
+<InformaçõesDaColeta>
+	<IdRede>3</IdRede>
+	<NomeDaRede>UFES - CT</NomeDaRede>
+	<IdSensor>5</IdSensor>
+	<NomeDoSensor>IRIS [XM2110CB]</NomeDoSensor>
+	<IdTipoDeMonitoramento>1</IdTipoDeMonitoramento>
+	<TipoDeMonitoramento>Temperatura [ºC]</TipoDeMonitoramento>
+	<IdUsuário>08603179786</IdUsuário>
+	<DataHoraGeração>02/11/2016 21:09:41</DataHoraGeração>
+	<DataHoraEnvio>02/11/2016 21:09:41</DataHoraEnvio>
+	<DataHoraPublicacao>02/11/2016 21:09:42</DataHoraPublicacao>
+	<ValorMensurado>27.65319391551463</ValorMensurado>
+	<Localizacao>-20.2724551;-40.3059429</Localizacao>
+	<SituacaoTempo>Sem Nuvens e Pouco vento</SituacaoTempo>
+	<PeríodoDoDia>Noite</PeríodoDoDia>
+	<Observações>As medições dos sensores foram realizadas dentro de uma sala no PPGI/UFES</Observações>
+	<MetricaCoverge>1</MetricaCoverge>
+	<MetricaUp__To__Dateness>0.77</MetricaUp__To__Dateness>
+	<MetricaAccuracy>0.97</MetricaAccuracy>
+	<MetricaFrequency>1</MetricaFrequency>
+	<MetricaSignificance>0</MetricaSignificance>
+	<MetricaQoC__Geral>0.94</MetricaQoC__Geral>
+</InformaçõesDaColeta>
