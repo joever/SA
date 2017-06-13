@@ -1,0 +1,53 @@
+•	enviaXMLCarga:
+		Dados de Entrada:
+			XML;
+		Dados de Saída:
+			Retornado TRUE se os dados foram gravados com sucesso e FALSE se ocorreu algum problema na gravação dos dados na base do SA;
+•	enviaListaXMLCarga
+		Dados de Entrada:
+			Lista de XML;
+		Dados de Saída:
+			Retornado TRUE se os dados foram gravados com sucesso e FALSE se ocorreu algum problema na gravação dos dados na base do SA;
+•	enviaXMLProcessar
+		Dados de Entrada:
+			Lista de XML sem dados de QoC;
+		Dados de Saída:
+			Lista de XML com dados de QoC;
+•	getXML
+		Dados de Entrada:
+			Id da Rede;
+			Id do Tipo de Monitoramento;
+			Id do Usuário;
+			Data e Hora de geração inicial; Formato: DD/MM/AAAA HH:MM:SS Exemplo: 26/06/2016 00:00:00
+			Data e Hora de geração final; Formato: DD/MM/AAAA HH:MM:SS Exemplo: 26/06/2016 23:59:59
+			Opção se deseja que seja avaliado os dados ou não: TRUE ou FALSE;
+		Dados de Saída:
+			Lista de XML com dados de QoC;
+•	getXMLAccuracyMin
+		Dados de Entrada:
+			Id da Rede;
+			Id do Tipo de Monitoramento;
+			Id do Usuário;
+			Data e Hora de geração inicial; Formato: DD/MM/AAAA HH:MM:SS Exemplo: 26/06/2016 00:00:00
+			Data e Hora de geração final; Formato: DD/MM/AAAA HH:MM:SS Exemplo: 26/06/2016 23:59:59
+			Valor mínimo da métrica Accuracy; Exemplo: 0.8; Dessa forma todos os valores que tiveram uma Accuracy menor que 0.8 não serão retornados;
+		Dados de Saída:
+			Lista de XML com dados de QoC;
+•	avaliaTempos
+		Dados de Entrada:
+			Id da Rede;
+			Id do Tipo de Monitoramento;
+			Id do Usuário;
+			Data e Hora de geração inicial; Formato: DD/MM/AAAA HH:MM:SS Exemplo: 26/06/2016 00:00:00
+			Data e Hora de geração final; Formato: DD/MM/AAAA HH:MM:SS Exemplo: 26/06/2016 23:59:59
+			Valor mínimo da métrica Accuracy; Exemplo: 0.8; Dessa forma todos os valores que tiveram uma Accuracy menor que 0.8 não serão retornados;
+		Dados de Saída:
+			Tempo que levou para gerar a informação:
+				Com QoC;
+				Sem QoC;
+			Tempo que levou da geração até o envio:
+				Com QoC;
+				Sem QoC;
+			Tempo que levou do envio até a publicação:
+				Com QoC;
+				Sem QoC;
