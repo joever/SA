@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{saidaRedeJSF.ListSaidaredeJSFEmpty}" rendered="#{saidaredeJSFController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{saidaredeJSFController.items.rowCount > 0}">
+                    <h:outputText value="#{saidaredeJSFController.pagination.pageFirstItem + 1}..#{saidaredeJSFController.pagination.pageLastItem + 1}/#{saidaredeJSFController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{saidaredeJSFController.previous}" value="#{saidaRedeJSF.Previous} #{saidaredeJSFController.pagination.pageSize}" rendered="#{saidaredeJSFController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{saidaredeJSFController.next}" value="#{saidaRedeJSF.Next} #{saidaredeJSFController.pagination.pageSize}" rendered="#{saidaredeJSFController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{saidaredeJSFController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_idsaidarede}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idsaidarede}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_idrede}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idrede}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_nomerede}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nomerede}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_idsensor}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idsensor}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_nomesensor}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nomesensor}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_idtm}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idtm}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_tipomonitoramento}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tipomonitoramento}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_idusuario}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idusuario}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_dthrgeracao}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dthrgeracao}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_dthrenvio}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.dthrenvio}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_valormensurado}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.valormensurado}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_coverage}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.coverage}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_upToDateness}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.upToDateness}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_accuracy}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.accuracy}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_completeness}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.completeness}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_significance}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.significance}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{saidaRedeJSF.ListSaidaredeJSFTitle_qocGeral}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.qocGeral}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{saidaredeJSFController.prepareView}" value="#{saidaRedeJSF.ListSaidaredeJSFViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{saidaredeJSFController.prepareEdit}" value="#{saidaRedeJSF.ListSaidaredeJSFEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{saidaredeJSFController.destroy}" value="#{saidaRedeJSF.ListSaidaredeJSFDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{saidaredeJSFController.prepareCreate}" value="#{saidaRedeJSF.ListSaidaredeJSFCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{saidaRedeJSF.ListSaidaredeJSFIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

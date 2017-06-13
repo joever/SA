@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{saidaRedeJSF.CreateSaidaredeJSFTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_idsaidarede}" for="idsaidarede" />
+                    <h:inputText id="idsaidarede" value="#{saidaredeJSFController.selected.idsaidarede}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_idsaidarede}" required="true" requiredMessage="#{saidaRedeJSF.CreateSaidaredeJSFRequiredMessage_idsaidarede}"/>
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_idrede}" for="idrede" />
+                    <h:inputText id="idrede" value="#{saidaredeJSFController.selected.idrede}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_idrede}" required="true" requiredMessage="#{saidaRedeJSF.CreateSaidaredeJSFRequiredMessage_idrede}"/>
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_nomerede}" for="nomerede" />
+                    <h:inputText id="nomerede" value="#{saidaredeJSFController.selected.nomerede}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_nomerede}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_idsensor}" for="idsensor" />
+                    <h:inputText id="idsensor" value="#{saidaredeJSFController.selected.idsensor}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_idsensor}" required="true" requiredMessage="#{saidaRedeJSF.CreateSaidaredeJSFRequiredMessage_idsensor}"/>
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_nomesensor}" for="nomesensor" />
+                    <h:inputText id="nomesensor" value="#{saidaredeJSFController.selected.nomesensor}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_nomesensor}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_idtm}" for="idtm" />
+                    <h:inputText id="idtm" value="#{saidaredeJSFController.selected.idtm}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_idtm}" required="true" requiredMessage="#{saidaRedeJSF.CreateSaidaredeJSFRequiredMessage_idtm}"/>
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_tipomonitoramento}" for="tipomonitoramento" />
+                    <h:inputText id="tipomonitoramento" value="#{saidaredeJSFController.selected.tipomonitoramento}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_tipomonitoramento}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_idusuario}" for="idusuario" />
+                    <h:inputText id="idusuario" value="#{saidaredeJSFController.selected.idusuario}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_idusuario}" required="true" requiredMessage="#{saidaRedeJSF.CreateSaidaredeJSFRequiredMessage_idusuario}"/>
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_dthrgeracao}" for="dthrgeracao" />
+                    <h:inputText id="dthrgeracao" value="#{saidaredeJSFController.selected.dthrgeracao}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_dthrgeracao}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_dthrenvio}" for="dthrenvio" />
+                    <h:inputText id="dthrenvio" value="#{saidaredeJSFController.selected.dthrenvio}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_dthrenvio}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_valormensurado}" for="valormensurado" />
+                    <h:inputText id="valormensurado" value="#{saidaredeJSFController.selected.valormensurado}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_valormensurado}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_coverage}" for="coverage" />
+                    <h:inputText id="coverage" value="#{saidaredeJSFController.selected.coverage}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_coverage}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_upToDateness}" for="upToDateness" />
+                    <h:inputText id="upToDateness" value="#{saidaredeJSFController.selected.upToDateness}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_upToDateness}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_accuracy}" for="accuracy" />
+                    <h:inputText id="accuracy" value="#{saidaredeJSFController.selected.accuracy}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_accuracy}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_completeness}" for="completeness" />
+                    <h:inputText id="completeness" value="#{saidaredeJSFController.selected.completeness}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_completeness}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_significance}" for="significance" />
+                    <h:inputText id="significance" value="#{saidaredeJSFController.selected.significance}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_significance}" />
+                    <h:outputLabel value="#{saidaRedeJSF.CreateSaidaredeJSFLabel_qocGeral}" for="qocGeral" />
+                    <h:inputText id="qocGeral" value="#{saidaredeJSFController.selected.qocGeral}" title="#{saidaRedeJSF.CreateSaidaredeJSFTitle_qocGeral}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{saidaredeJSFController.create}" value="#{saidaRedeJSF.CreateSaidaredeJSFSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{saidaredeJSFController.prepareList}" value="#{saidaRedeJSF.CreateSaidaredeJSFShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{saidaRedeJSF.CreateSaidaredeJSFIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

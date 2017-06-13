@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_idsaidarede}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.idsaidarede}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_idsaidarede}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_idrede}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.idrede}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_idrede}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_nomerede}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.nomerede}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_nomerede}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_idsensor}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.idsensor}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_idsensor}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_nomesensor}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.nomesensor}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_nomesensor}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_idtm}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.idtm}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_idtm}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_tipomonitoramento}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.tipomonitoramento}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_tipomonitoramento}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_idusuario}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.idusuario}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_idusuario}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_dthrgeracao}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.dthrgeracao}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_dthrgeracao}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_dthrenvio}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.dthrenvio}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_dthrenvio}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_valormensurado}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.valormensurado}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_valormensurado}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_coverage}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.coverage}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_coverage}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_upToDateness}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.upToDateness}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_upToDateness}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_accuracy}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.accuracy}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_accuracy}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_completeness}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.completeness}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_completeness}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_significance}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.significance}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_significance}"/>
+                    <h:outputText value="#{saidaRedeJSF.ViewSaidaredeJSFLabel_qocGeral}"/>
+                    <h:outputText value="#{saidaredeJSFController.selected.qocGeral}" title="#{saidaRedeJSF.ViewSaidaredeJSFTitle_qocGeral}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{saidaredeJSFController.destroyAndView}" value="#{saidaRedeJSF.ViewSaidaredeJSFDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{saidaRedeJSF.ViewSaidaredeJSFEditLink}"/>
+                <br />
+                <h:commandLink action="#{saidaredeJSFController.prepareCreate}" value="#{saidaRedeJSF.ViewSaidaredeJSFCreateLink}" />
+                <br />
+                <h:commandLink action="#{saidaredeJSFController.prepareList}" value="#{saidaRedeJSF.ViewSaidaredeJSFShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{saidaRedeJSF.ViewSaidaredeJSFIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
